@@ -1,11 +1,13 @@
 # snake game project using python turtle module (python day 20)
 
 from turtle import Turtle, Screen
+import time
 
 screen = Screen()
 screen.setup(width=600, height=600)
 screen.bgcolor('black')
 screen.title('Snake Game')
+screen.tracer(0)
 
 # turtle_size = []
 # x_position = 0
@@ -17,14 +19,24 @@ screen.title('Snake Game')
 #     turtle_size.append(block)
 #     x_position = x_position - 20
 
+
 starting_positions = [(0,0),(-20,0),(-40,0)]
+segments = []
 
 for position in starting_positions:
     new_segment = Turtle('square')
     new_segment.color('white')
+    new_segment.penup()
     new_segment.goto(position)
+    segments.append(new_segment)
 
-
+# to move the snake
+game_is_on = True
+while game_is_on:
+    screen.update()
+    time.sleep(0.5)
+    for segment in segments:
+        segment.forward(20)
 
 
 screen.exitonclick()
