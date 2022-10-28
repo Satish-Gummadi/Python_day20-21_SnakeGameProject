@@ -13,11 +13,17 @@ screen.tracer(0)
 # replaced code here with snake class in snake.py
 snake = Snake()
 
+screen.listen()
+screen.onkey(snake.up,"Up")
+screen.onkey(snake.down,"Down")
+screen.onkey(snake.left,"Left")
+screen.onkey(snake.right,"Right")
+
 # to move the snake
 game_is_on = True
 while game_is_on:
     screen.update()
-    time.sleep(0.5)
+    time.sleep(0.1)
     # added move method in snake class for motion of snake
     snake.move()
 
