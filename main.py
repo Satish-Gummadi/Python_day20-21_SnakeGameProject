@@ -1,4 +1,5 @@
-# snake game project using python turtle module (python day 20)
+# snake game project using python turtle module (python day 21)
+# Game is completed with major coding
 
 from turtle import Screen
 from snake import Snake
