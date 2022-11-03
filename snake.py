@@ -4,7 +4,7 @@ from turtle import Turtle
 # defining constants here, to make it easier to update when required
 STARTING_POSITION = [(0, 0), (-20, 0), (-40, 0)]
 MOVE_DISTANCE = 20
-#These are the directions to set heading of the snake, which are constants
+# These are the directions to set heading of the snake, which are constants
 RIGHT = 0
 UP = 90
 LEFT = 180
@@ -15,7 +15,7 @@ class Snake:
     def __init__(self):
         self.segments = []
         self.create_snake()
-        self.head = self.segments[0]   #since we are only moving first piece of snake, we named it as head
+        self.head = self.segments[0]   # since we are only moving first piece of snake, we named it head
 
     def create_snake(self):
         for position in STARTING_POSITION:
